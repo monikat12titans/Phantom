@@ -1,0 +1,82 @@
+<section class="signup-form col-7 mx-auto">
+    <div class="form-title">
+        <h1>Create account</h1>
+        <p>Please complete the fields below (* Required)</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <form action="" class="row" [formGroup]="SignupForm">
+                <div class="col-md-6 form-group form-group">
+                    <label class="form-label">Email *</label>
+                    <input type="email" class="form-control" formControlName="Email">
+                </div>
+                
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Nickname / Station Name *</label>
+                    <input type="text" class="form-control" formControlName="Nickname">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Password (8 characters or more) *</label>
+                    <input type="password" class="form-control" formControlName="Password">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Confirm Password *</label>
+                    <input type="password" class="form-control" formControlName="ConfirmPassword">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">First Name *</label>
+                    <input type="text" class="form-control" formControlName="FirstName">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Last Name *</label>
+                    <input type="text" class="form-control" formControlName="LastName">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Company</label>
+                    <input type="text" class="form-control" formControlName="Company">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">
+                        Phone Number</label>
+                    <input type="text" class="form-control" formControlName="PhoneNumber">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Address *</label>
+                    <input type="any" class="form-control" formControlName="Address">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Address 2</label>
+                    <input type="any" class="form-control" formControlName="Address2">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">City *</label>
+                    <input type="text" class="form-control" formControlName="City">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Postal Code *</label>
+                    <input type="text" class="form-control" formControlName="PostalCode">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">State *</label>
+                    <input type="text" class="form-control" formControlName="State">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Country *</label>
+                    <input type="text" class="form-control" formControlName="Country">
+                </div>
+                
+            </form>
+            <p>By clicking ‘Create Account’ you agree to the <a href="/">Terms & Conditions</a> of Phantom Producer.</p>
+            <div class="col-8 mx-auto">
+                <button class="Signup-btn" (click)="signUp()">Create Account</button>
+                <p class="text-center">
+                    <a [routerLink]="['/signin']">Login</a>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            {{signupFormValue | json}}
+        </div>
+    </div>
+</section>
